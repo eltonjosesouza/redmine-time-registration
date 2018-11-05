@@ -245,7 +245,7 @@ public class Main {
 		int id;
 
 		//Getting the first tab, where the configuration data is
-		Sheet sheet = workbook.getSheetAt(0);
+		Sheet sheet = workbook.getSheet("Parametros");
 
 		//Let's iterate over the rows
 		Iterator<Row> rowIterator = sheet.rowIterator();
@@ -296,7 +296,7 @@ public class Main {
 		Iterator<Cell> cellIterator;
 
 		//Getting the second tab, the one with the time entries
-		sheet = workbook.getSheetAt(1);
+		sheet = workbook.getSheet("Time Entries");
 
 		double incrementBy = 70/sheet.getPhysicalNumberOfRows();
 		double progressValue = 20 + incrementBy;
